@@ -1,0 +1,17 @@
+def collatz(number):
+ if number%2==0:  #even number
+   y=number//2
+   print(y)
+   return y
+ else:
+   x=(3*number)+1
+   print(x)
+   return x
+try:   
+  a=input('Enter a number:  ') #taking input from user
+  
+  while a!=1: 
+    a=collatz(int(a))
+    
+except ValueError:
+  print('Value Error. Please enter an integer')
